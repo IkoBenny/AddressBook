@@ -13,6 +13,11 @@ public class Contacts {
 	public void add(Contact c) {
 		contacts.add(c);
 	}
+	
+	public void add() {
+		Contact c = create();
+		contacts.add(c);
+	}
 
 	public Contact delete(String name) {
 		Contact c = null;
