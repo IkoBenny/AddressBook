@@ -2,10 +2,13 @@ package aop;
 
 public aspect Update {
 
-	pointcut update(): 
+	pointcut update(Contacts book): 
+		target(book) &&
 		call(Contact Contacts.update(String));
+		 
 	
-	after(): update(){
-		System.out.println("Record Updated");
+	after(Contacts book) returning (Contact c): update(book){		
+		Log log = new Log(c);
+		log.writeUpdate();
 	}
 }
