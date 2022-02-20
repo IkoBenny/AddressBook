@@ -2,10 +2,12 @@ package aop;
 
 public aspect Delete {
 
-	pointcut delete():
+	pointcut delete(Contacts book):
+		target(book) &&
 		call(Contact Contacts.delete(String));
 	
-	after(): delete(){
-		System.out.println("Record deleted");
+	after(Contacts book) returning (Contact c): delete(book){
+		Log log = new Log(c);
+		log.writeDelete();
 	}
 }
