@@ -4,7 +4,7 @@ public aspect Update {
 
 	pointcut update(Contacts book): 
 		target(book) &&
-		call(Contact Contacts.update(String));
+		call(Contact Contacts.update());
 		 
 	
 	after(Contacts book) returning (Contact c): update(book){		
