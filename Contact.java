@@ -35,18 +35,49 @@ public class Contact implements Cloneable {
 			return true;
 		else return false;
 	}
-	
-	public static void main(String [] args) {
-		Contact c = new Contact("Mr. Fake", "123 Fake St", "Fakeville", "FA", "12345", "123-456-7890");
-		Contact d = new Contact("Mr. Fake", "123 Fakdfse St", "Fakdfsseville", "FAsfd", "12dfs345", "123-456-7sfs890");
-		c = (Contact)d.clone();
-		Contacts book = new Contacts();
-		book.add(c);
-		book.add(d);
-		//book.delete("Mr. Fake");
-		book.display();
+
+	public String getStreet() {
+		return street;
 	}
-	
-	
+
+	public void setStreet(String street) {
+		this.street = street;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public String getZip() {
+		return zip;
+	}
+
+	public void setZip(String zip) {
+		this.zip = zip;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}	
 
 }
