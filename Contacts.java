@@ -17,6 +17,7 @@ public class Contacts {
 	public void add() {
 		Contact c = create();
 		contacts.add(c);
+		System.out.println("Contact Created.");
 	}
 	
 	public int getIndex(String name) {
@@ -37,6 +38,7 @@ public class Contacts {
 		int index = getIndex(name);
 		c = get(name);
 		contacts.remove(index);
+		System.out.println("Contact Deleted.");
 		return c;		
 	}
 
@@ -77,6 +79,7 @@ public class Contacts {
 		Contact old = get(name);
 		int index = getIndex(name);
 		contacts.set(index, c); 
+		System.out.println("Contact Updated.");
 		return old;
 	}
 
@@ -86,15 +89,4 @@ public class Contacts {
 		}
 	}
 
-	public static void main(String [] args) {
-		Contacts book = new Contacts();
-		Contact sample = new Contact ("John", "123 Fake St.", "Fakeville", "Fakeland", "12345", "123-456-7890");
-		Contact sample2 = new Contact ("Johngdfg", "123 Fake St.", "Fakeville", "Fakeland", "12345", "123-456-7890");
-		Contact sample3 = new Contact ("Jdfgdohn", "123 Fake St.", "Fakeville", "Fakeland", "12345", "123-456-7890");
-		book.add(sample);
-		book.add(sample2);
-		book.add(sample3);
-		System.out.println(book.getIndex("Jdfgdohn"));
-		
-	}
 }
