@@ -8,9 +8,10 @@ public class Main {
 		Contacts book = new Contacts();
 		int input = 99;
 		Scanner in = new Scanner(System.in);
+		System.out.println("Welcome to the Address Book Application by: Benny Iko");
 		while (input == 0 == false) {
 			// menu prompts
-			System.out.println("Welcome to the Address Book Application by: Benny Iko");
+			
 			System.out.println("Press corresponding number key to execute a command, followed by ENTER");
 			System.out.println("Press \"0\" to exit");
 			System.out.println("Press \"1\" to add a contact");
@@ -20,8 +21,11 @@ public class Main {
 			// keyboard input
 			input = in.nextInt();
 			// address book functionality as branches
-			if (input == 0)
+			if (input == 0) {
+				System.out.println("Thank you for using Address Book Application. Goodbye!");
 				break;
+			}
+				
 			else if (input == 1)
 				book.add();
 			else if (input == 2)
