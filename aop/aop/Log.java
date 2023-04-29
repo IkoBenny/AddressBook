@@ -19,6 +19,16 @@ public class Log {
 			e.printStackTrace();
 		}
 	}
+	
+	public void writeAdd() {
+		try {
+			FileWriter writer = new FileWriter("output.txt");
+			writer.write("Record Added:" + c.toString() + "\n");
+			writer.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 
 	public void writeDelete() {
 		try {
